@@ -1,0 +1,271 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+
+
+}
+li{
+    list-style: none;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+/* header */
+.container{
+    width: 1170px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#header {
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #000;
+    height: 60px;
+    width: 100%;
+}
+.header {
+    height: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   display: flex;
+   align-items: center;
+}
+
+/* headerTop */
+.headerTop
+{
+    display: flex;
+    justify-content: space-between;
+    
+}
+/* header-top-left */
+.header-top-left{
+    display: flex;
+
+}
+/* Number */
+.s{
+    color: #464646;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+.Number{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.Number span{
+    color: #fff;
+    font-family: 'Roboto', sans-serif
+    ;
+    font-size: 16px;
+
+
+}
+.fa-phone {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 26px;
+}
+
+/* email */
+.email{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+
+}
+.fa-envelope {
+    color: #fff;
+    font-size: 16px;
+margin-right: 26px;
+
+}
+
+/* header-top-right */
+/* social */
+.social{
+    color: #fff;
+    display: flex;
+    column-gap: 29px;
+}
+.social i{
+    color: #fff;
+    font-size: 16px;
+
+}
+
+
+/* header2 */
+#header2{
+   
+    background-color: #fff;
+    height: 100px;
+    width: 100%;
+}
+
+.header2{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+
+/* logo */
+.logo a span {
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Poppins-light', sans-serif;
+
+}
+.logo a span:nth-child(1){
+color: #63c693;
+}
+
+.logo a span:nth-child(2){
+    color: #000;
+    }
+    
+    /* list */
+    
+    .list ul {
+        display: flex;
+        flex-direction: row;
+        column-gap: 50px;
+    }
+    .list ul li a{
+    color: #3f4853;
+    }
+    .list ul li a:active{
+        color: #3cb878;
+        }
+
+    /* cart */
+    .cart {
+        display: flex;
+        flex-direction: row;
+        column-gap: 30px;
+      
+    }
+    .cart div {
+        cursor: pointer;
+    }
+.cart-Number{
+    position: absolute;
+    color: #fff;
+    background-color: #3cb878;
+    border: solid #3cb878 7px;
+    border-radius: 50%;
+    border-top-width: 2px;
+    border-bottom-width: 1px;
+    margin-left: -10px;
+    margin-top: -15px;
+}
+
+
+
+
+
+/* section1 */
+#section1{
+height: 800px;
+width: 100%;
+background-image: url(./img/pexels-moose-photos-1036623.png);
+background-size:auto;
+background-position: 50% 13%;
+background-repeat: no-repeat;
+}
+
+/* text-and-Button  */
+
+.text-and-Button{
+    margin-left: 390px;
+    padding-top: 277px;
+}
+.textOne{
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.textTOW{
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+    color: #3cb878;
+
+}
+.section1-P{
+   color:  #333333;
+   font-size: 16px;
+   font-weight:600;
+   max-width: 553px;
+}
+
+.section1-button{
+    border: none;
+    background: none;
+    border-top: 3px solid #333333;
+    border-right: 3px solid #333333;
+    border-bottom: 3px solid #333333;
+    position: relative;
+    padding-left: 5px;
+    width: 100px;
+    height: 44px;
+    margin-top: 31px;
+    cursor: pointer;
+}
+
+.section1-button span:nth-child(1){
+    position: absolute;
+    background: #333333;
+    height: 40%;
+    width: 3px;
+    top: 0;
+    right: 94px;
+}
+
+.section1-button span:nth-child(2){
+    position: absolute;
+    background: #333333;
+    height: 40%;
+    width: 3px;
+    bottom: 0;
+    right: 94px;
+}
+
+@media screen and (max-width:1200px) {
+    .container{
+        width: 970px;
+    }
+}
+
+
+@media screen and (max-width:992px) {
+    .container{
+        width: 750px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container{
+        width: auto;
+        
+    }
+}
+
