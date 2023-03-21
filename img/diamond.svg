@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" viewBox="0 0 40 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #464646;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="diamond" class="cls-1" d="M219.116,1737.45H230.6l7.688,21.5Zm13.567,0h12.629l-5.84,21.55Zm26.275,0H247.565l-7.061,21.5Zm-5.492-9.96,5.534,8.55H247.932Zm-7.272,8.35,5.534-8.84H240.66Zm-7.236-8.35,5.534,8.55H233.424Zm-7.152,8.35,5.533-8.84H226.272Zm-7.272-8.35,5.533,8.55H219Z" transform="translate(-219 -1727)"/>
+</svg>

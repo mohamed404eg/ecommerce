@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="32" viewBox="0 0 35 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #464646;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="plane_2" data-name="plane 2" class="cls-1" d="M704,1743.71l12.08,3.82,14.878-13.2-11.529,14.22,12.919,4.17L739,1726Zm15.021,6.94V1758l4.253-6.08Z" transform="translate(-704 -1726)"/>
+</svg>
