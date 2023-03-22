@@ -106,38 +106,31 @@ for (let c = 0; c < 4; c++) {
   addToCart[c].setAttribute("onclick", `addPUSH(${prodactArray[c].id})`);
 }
 
-// Array cart Include
-let cartInclude = [];
-
 //  function onclick icon cart
 function addPUSH(id) {
   // Array cart Include PUSH to cartInclude
-  if (cartInclude.includes(prodactArray[id])) {
+  if (localStorage.getItem(prodactArray[id].id)) {
+    // get Retrieves localStorage
+    let Retrieves = localStorage.getItem(`${prodactArray[`${id}`].id}`);
+    // Retrieves to Object
+    let RetrievesObj = JSON.parse(Retrieves);
+    // cheak orders one or no
+    if (RetrievesObj.orders >= 1) {
+      // Object change orders to pluse one
+      RetrievesObj.orders += 1;
+      console.info("orders++");
+
+      let RetrievesStringify = JSON.stringify(RetrievesObj);
+      //    Item update in localStorage
+      localStorage.setItem(`${prodactArray[`${id}`].id}`, RetrievesStringify);
+    }
+
     console.info("exis");
   } else {
     // Add the element if it does not exist Array cartInclude
-    cartInclude.push(prodactArray[id]);
-  }
+    let tostringifyS = JSON.stringify(prodactArray[id]);
 
-  // Check if it exists or not
-  if (localStorage.getItem(id)) {
-    // get Retrieves localStorage
-    let Retrieves = localStorage.getItem(`${cartInclude[`${id}`].id}`);
-    // Retrieves to Object
-    let RetrievesObj = JSON.parse(Retrieves);
-    // Object change orders to pluse one
-    RetrievesObj.orders += 1;
-
-    // Retrieves to Object to stringify
-    let RetrievesStringify = JSON.stringify(RetrievesObj);
-    // Item update in localStorage
-    localStorage.setItem(`${cartInclude[`${id}`].id}`, RetrievesStringify);
-  } else {
-    // Add the element if it does not exist localStorage
-    localStorage.setItem(
-      cartInclude[`${id}`].id,
-      JSON.stringify(cartInclude[id])
-    );
+    localStorage.setItem(`${prodactArray[`${id}`].id}`, tostringifyS);
   }
 
   // call function cart Number Span UPdata
@@ -297,15 +290,10 @@ let FeaturedProductsTitle = document.querySelectorAll(".FeaturedProductsTitle");
 let FeaturedProductsPrice = document.querySelectorAll(".FeaturedProductsPrice");
 
 for (i = 0; i < 10; i++) {
-   FeaturedProductsImg[i].setAttribute("src", `${FeaturedProducts[i].img}`);
+  FeaturedProductsImg[i].setAttribute("src", `${FeaturedProducts[i].img}`);
   FeaturedProductsTitle[i].innerHTML = `${FeaturedProducts[i].title}`;
   FeaturedProductsPrice[i].innerHTML = `${FeaturedProducts[i].price}`;
- 
 }
-
-
-
-
 
 // initial RatingFeatured stars
 const RatingFeatured = {
@@ -331,7 +319,46 @@ const RatingFeatured = {
   19: 2,
 };
 
+let addToCart2 = document.querySelectorAll(".FeaturedProductsaddToCart");
 
+// for add onclick PUSH to cartInclude
+for (let c = 0; c < 10; c++) {
+  addToCart2[c].setAttribute("onclick", `addPUSH2(${FeaturedProducts[c].id})`);
+}
+
+//  function onclick icon cart
+function addPUSH2(id) {
+  // Array cart Include PUSH to cartInclude
+  if (localStorage.getItem(FeaturedProducts[id].id)) {
+    // get Retrieves localStorage
+    let Retrieves = localStorage.getItem(`${FeaturedProducts[`${id}`].id}`);
+    // Retrieves to Object
+    let RetrievesObj = JSON.parse(Retrieves);
+    // cheak orders one or no
+    if (RetrievesObj.orders >= 1) {
+      // Object change orders to pluse one
+      RetrievesObj.orders += 1;
+      console.info("orders++");
+
+      let RetrievesStringify = JSON.stringify(RetrievesObj);
+      //    Item update in localStorage
+      localStorage.setItem(
+        `${FeaturedProducts[`${id}`].id}`,
+        RetrievesStringify
+      );
+    }
+
+    console.info("exis");
+  } else {
+    // Add the element if it does not exist Array cartInclude
+    let tostringifyS = JSON.stringify(FeaturedProducts[id]);
+
+    localStorage.setItem(`${FeaturedProducts[`${id}`].id}`, tostringifyS);
+  }
+
+  // call function cart Number Span UPdata
+  cartNumberSpanUPdata();
+}
 
 // total stars
 const TotalStarsFeatured = 5;
@@ -341,7 +368,7 @@ document.addEventListener("DOMContentLoaded", getRatingsFeatured);
 
 // get Rating
 function getRatingsFeatured() {
-  for (let rat = 0; rat < 9; rat++) {
+  for (let rat = 0; rat < 10; rat++) {
     const StarsPercent = (RatingFeatured[rat] / TotalStarsFeatured) * 100;
 
     //Round to nearest 10
@@ -350,6 +377,5 @@ function getRatingsFeatured() {
     // set width star-inner to Percent
     let stars_inner = document.querySelectorAll(".stars-inner2");
     stars_inner[rat].style.width = StarsPercentRound;
- 
   }
 }
