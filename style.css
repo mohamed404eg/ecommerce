@@ -164,10 +164,30 @@ a {
 }
 .list ul li a {
   color: #3f4853;
+  position: relative;
+  transition: ease 400ms;
 }
 .list ul li a:active {
   color: #3cb878;
+  
 }
+
+.list ul li a::after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #3cb878;
+  bottom: -3px;
+  left: 0;
+  transform-origin: bottom left;
+  transition: ease 400ms;
+}
+.list ul li a:hover::after {
+  width: 100%;
+ 
+}
+
 
 /* cart */
 .cart {
@@ -203,9 +223,10 @@ a {
 /* text-and-Button  */
 
 .text-and-Button {
-  margin-left: 390px;
-  padding-top: 277px;
+  margin-left: 10%;
+  padding-top: 230px;
 }
+
 .textOne {
   font-size: 60px;
   font-weight: 900;
@@ -722,6 +743,11 @@ footer {
 }
 
 @media screen and (max-width: 1200px) {
+  .text-and-Button {
+    margin-left: 10%;
+    padding-top: 230px;
+  }
+
   .FeaturedProducts {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -826,7 +852,6 @@ footer {
   .headerTop {
     display: flex;
     justify-content: space-around;
-    
   }
 
   .social {
@@ -1034,7 +1059,6 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
-
   .container {
     max-width: 360px;
   }

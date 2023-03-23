@@ -385,3 +385,11 @@ function getRatingsFeatured() {
     stars_inner[rat].style.width = StarsPercentRound;
   }
 }
+
+
+
+
+
+function () {
+  
+}
