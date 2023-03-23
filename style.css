@@ -27,7 +27,7 @@ a {
   margin-left: auto;
 }
 @media (min-width: 576px) {
-  .container{
+  .container {
     max-width: 540px;
   }
 }
@@ -42,16 +42,15 @@ a {
   }
 }
 @media (min-width: 1200px) {
-  .container{
+  .container {
     max-width: 1140px;
   }
 }
 @media (min-width: 1400px) {
-  .container{
+  .container {
     max-width: 1320px;
   }
 }
-
 
 #header {
   margin-right: auto;
@@ -72,6 +71,7 @@ a {
 .headerTop {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 /* header-top-left */
 .header-top-left {
@@ -421,7 +421,6 @@ a {
 .Categories-offer div a img {
   height: 290px;
   max-width: 300px;
-
 }
 
 /* FeaturedProducts */
@@ -472,10 +471,8 @@ a {
   color: #3cb878;
 }
 .FeaturedProductsPrice::before {
-
-    content: "$";
-    color: #3cb878;
-
+  content: "$";
+  color: #3cb878;
 }
 
 /* stars */
@@ -601,6 +598,7 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   height: 300px;
+  width: 100%;
 }
 
 .Clients {
@@ -724,14 +722,13 @@ footer {
 }
 
 @media screen and (max-width: 1200px) {
- 
   .FeaturedProducts {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 30px;
     margin-top: 100px;
     margin-bottom: 164px;
-}
+  }
 
   .Subscribe-Clients {
     display: flex;
@@ -748,38 +745,6 @@ footer {
     height: auto;
     background-position: center;
     padding-bottom: 19px;
-}
-#Subscribe-Clients {
-  width: 100%;
-  height: auto;
-}
-.Subscribe-Clients {
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
-}
-.Subscribe {
-  padding-right: 0;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 19px;
-}
-
-.SOCIAL-CONNECTION {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  width: 99%;
-}
-}
-
-@media screen and (max-width: 992px) {
-  .container {
- 
   }
   #Subscribe-Clients {
     width: 100%;
@@ -799,44 +764,73 @@ footer {
     padding-bottom: 19px;
   }
 
+  .SOCIAL-CONNECTION {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 99%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+  }
+  #Subscribe-Clients {
+    width: 100%;
+    height: auto;
+  }
+  .Subscribe-Clients {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+  .Subscribe {
+    padding-right: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 19px;
+  }
 
   .list ul {
     display: flex;
     flex-direction: row;
     column-gap: 35px;
-}
-footer {
-  height: auto;
-}
-.text-and-Button {
-  margin-left: 10%;
-  padding-top: 277px;
-}
-.Categories-offer div a img {
-  height: 259px;
-  max-width: 87%;
- 
-}
+  }
+  footer {
+    height: auto;
+  }
+  .text-and-Button {
+    margin-left: 10%;
+    padding-top: 277px;
+  }
+  .Categories-offer div a img {
+    height: 259px;
+    max-width: 87%;
+  }
 }
 
-@media screen and (max-width: 768px)  {
-  
+@media screen and (max-width: 768px) {
   .container {
     max-width: 540px;
   }
-  
+
   /* header */
   /* header Top */
-  .menu{
+  .menu {
     display: inline;
   }
   .headerTop {
     display: flex;
     justify-content: space-around;
+    
   }
 
-  .social{
-display: none;
+  .social {
+    display: none;
   }
   /* header buttom*/
   .list {
@@ -923,8 +917,7 @@ display: none;
     margin-top: 100px;
     margin-bottom: 164px;
     flex-basis: 70%;
-}
-
+  }
 
   /* features */
   .features {
@@ -933,9 +926,8 @@ display: none;
     justify-content: space-around;
     /* width: 78%; */
     flex-wrap: wrap;
-
-}
-.features div {
+  }
+  .features div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -943,7 +935,7 @@ display: none;
     height: 200px;
     flex: 50%;
     width: 100%;
-}
+  }
   /* Categories-offer */
   .Categories-offer {
     display: flex;
@@ -956,7 +948,6 @@ display: none;
   .Categories-offer div a img {
     height: 214px;
     max-width: 100px;
- 
   }
 
   /* Featured Products */
@@ -1022,11 +1013,10 @@ display: none;
     align-items: center;
     position: relative;
   }
-  
+
   /* footer */
   footer {
     height: auto;
-  
   }
   .mid-section {
     height: auto;
@@ -1043,8 +1033,8 @@ display: none;
   }
 }
 
-
 @media screen and (max-width: 500px) {
+
   .container {
     max-width: 360px;
   }
@@ -1052,12 +1042,28 @@ display: none;
     color: #fff;
     font-family: "Roboto", sans-serif;
     font-size: 13px;
-}
-.email {
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-  font-size: 13px;
-}
+  }
+
+  .s {
+    color: #464646;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .email {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+  }
+  .Number {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   /* .header top */
   .header-top-right {
@@ -1131,7 +1137,7 @@ display: none;
     column-gap: 30px;
     margin-top: 100px;
     margin-bottom: 164px;
-}
+  }
   .FeaturedProductsSngal {
     /* max-width: 330px; */
     position: relative;
@@ -1210,79 +1216,79 @@ display: none;
     color: #464646;
     margin-right: 10px;
     margin-left: 10px;
-}
+  }
   .email {
     color: #fff;
     font-family: "Roboto", sans-serif;
     font-size: 13px;
     display: flex;
     align-items: center;
-}
-.Number {
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  }
+  .Number {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-#section1 {
-  height: 800px;
-  width: 100%;
-  background-image: url(./img/pexels-moose-photos-1036623.png);
-  background-size: auto;
-  background-position: 70% 19%;
-  background-repeat: no-repeat;
-}
+  #section1 {
+    height: 800px;
+    width: 100%;
+    background-image: url(./img/pexels-moose-photos-1036623.png);
+    background-size: auto;
+    background-position: 70% 19%;
+    background-repeat: no-repeat;
+  }
 
   .textTOW {
     font-family: "Poppins", sans-serif;
     font-size: 34px;
     font-weight: 900;
     color: #3cb878;
-}
-.mid-section {
-  height: auto;
-  display: flex;
-  padding-top: 54px;
-  /* justify-content: stretch; */
-  flex-direction: column;
-  justify-content: center;
-  width: 97%;
-  align-items: center;
-}
-.mid-section {
-  height: auto;
-  display: flex;
-  padding-top: 54px;
-  /* justify-content: stretch; */
-  flex-direction: column;
-  justify-content: center;
-  width: 97%;
-  /* align-items: center; */
-  text-align: center;
-}
-.F-social-icon::before {
-  content: "";
-  width: 0;
-  height: 0;
-  background-color: #eeeeee;
-  position: absolute;
-  left: -20px;
-  bottom: -13px;
-}.F-social-icon::after {
-  content: "";
-  width: 0;
-  height: 0;
-  background-color: #eeeeee;
-  position: absolute;
-  right: -20px;
-  bottom: -13px;
-}
-.Categories-offer div a img {
-  height: 168px;
-  max-width: 168px;
-}
-
+  }
+  .mid-section {
+    height: auto;
+    display: flex;
+    padding-top: 54px;
+    /* justify-content: stretch; */
+    flex-direction: column;
+    justify-content: center;
+    width: 97%;
+    align-items: center;
+  }
+  .mid-section {
+    height: auto;
+    display: flex;
+    padding-top: 54px;
+    /* justify-content: stretch; */
+    flex-direction: column;
+    justify-content: center;
+    width: 97%;
+    /* align-items: center; */
+    text-align: center;
+  }
+  .F-social-icon::before {
+    content: "";
+    width: 0;
+    height: 0;
+    background-color: #eeeeee;
+    position: absolute;
+    left: -20px;
+    bottom: -13px;
+  }
+  .F-social-icon::after {
+    content: "";
+    width: 0;
+    height: 0;
+    background-color: #eeeeee;
+    position: absolute;
+    right: -20px;
+    bottom: -13px;
+  }
+  .Categories-offer div a img {
+    height: 168px;
+    max-width: 168px;
+  }
 }
