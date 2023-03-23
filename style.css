@@ -180,7 +180,6 @@ a {
   background-color: #3cb878;
   bottom: -3px;
   left: 0;
-  transform-origin: bottom left;
   transition: ease 400ms;
 }
 .list ul li a:hover::after {
