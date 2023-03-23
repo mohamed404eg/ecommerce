@@ -54,7 +54,7 @@ for (i = 0; i < prodactArray.length; i++) {
   // Delete the number of extra characters
   let s = prodactArray[i].title;
  
-  BestSellesProdectTitle[i].innerHTML = `${ s.substring(0, 20)}`
+  BestSellesProdectTitle[i].innerHTML = `${ s.substring(0, 50)}`
  
   
   BestSellesProdectPrice[i].innerHTML = prodactArray[i].price;
@@ -297,7 +297,7 @@ let FeaturedProductsPrice = document.querySelectorAll(".FeaturedProductsPrice");
 for (i = 0; i < 10; i++) {
   FeaturedProductsImg[i].setAttribute("src", `${FeaturedProducts[i].img}`);
   let FeaturedProductsTitleSubstring = FeaturedProducts[i].title;
-  FeaturedProductsTitle[i].innerHTML = `${FeaturedProductsTitleSubstring.substring(0,20)}`;
+  FeaturedProductsTitle[i].innerHTML = `${FeaturedProductsTitleSubstring.substring(0,50)}`;
   FeaturedProductsPrice[i].innerHTML = `${FeaturedProducts[i].price}`;
 }
 

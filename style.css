@@ -471,6 +471,12 @@ a {
   font-size: 18px;
   color: #3cb878;
 }
+.FeaturedProductsPrice::before {
+
+    content: "$";
+    color: #3cb878;
+
+}
 
 /* stars */
 .stars-outer2 {
