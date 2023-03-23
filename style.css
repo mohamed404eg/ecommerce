@@ -1200,6 +1200,35 @@ display: none;
 }
 
 @media screen and (max-width: 360px) {
+  .s {
+    color: #464646;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+  .email {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+.Number {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#section1 {
+  height: 800px;
+  width: 100%;
+  background-image: url(./img/pexels-moose-photos-1036623.png);
+  background-size: auto;
+  background-position: 70% 19%;
+  background-repeat: no-repeat;
+}
 
   .textTOW {
     font-family: "Poppins", sans-serif;
@@ -1245,4 +1274,9 @@ display: none;
   right: -20px;
   bottom: -13px;
 }
+.Categories-offer div a img {
+  height: 168px;
+  max-width: 168px;
+}
+
 }
