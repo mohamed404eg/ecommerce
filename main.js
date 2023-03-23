@@ -51,7 +51,12 @@ let BestSellesProdectPrice = document.querySelectorAll(
 
 for (i = 0; i < prodactArray.length; i++) {
   BestSellesProdectImg[i].setAttribute("src", `${prodactArray[i].img}`);
-  BestSellesProdectTitle[i].innerHTML = prodactArray[i].title;
+  // Delete the number of extra characters
+  let s = prodactArray[i].title;
+ 
+  BestSellesProdectTitle[i].innerHTML = `${ s.substring(0, 20)}`
+ 
+  
   BestSellesProdectPrice[i].innerHTML = prodactArray[i].price;
 }
 
@@ -291,7 +296,8 @@ let FeaturedProductsPrice = document.querySelectorAll(".FeaturedProductsPrice");
 
 for (i = 0; i < 10; i++) {
   FeaturedProductsImg[i].setAttribute("src", `${FeaturedProducts[i].img}`);
-  FeaturedProductsTitle[i].innerHTML = `${FeaturedProducts[i].title}`;
+  let FeaturedProductsTitleSubstring = FeaturedProducts[i].title;
+  FeaturedProductsTitle[i].innerHTML = `${FeaturedProductsTitleSubstring.substring(0,20)}`;
   FeaturedProductsPrice[i].innerHTML = `${FeaturedProducts[i].price}`;
 }
 
