@@ -390,6 +390,3 @@ function getRatingsFeatured() {
 
 
 
-function () {
-  
-}

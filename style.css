@@ -1051,6 +1051,7 @@ footer {
     justify-content: center;
     width: 100%;
     align-items: center;
+    text-align: center;
   }
   .mid-section ul {
     padding-left: 0;
