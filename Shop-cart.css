@@ -1,9 +1,25 @@
-table, th, td {
-    border: 1px solid black;
-  }
+table,
+th,
+td {
+  border: 1px solid black;
+}
 
+.imgProdect {
+  width: 100px;
+  height: 90px;
+}
 
-  .imgProdect {
-    width: 100px;
-    height: 90px;
-  }
+/* Breadcrumb  */
+.Breadcrumb {
+  padding-top: 50px;
+}
+
+.Breadcrumb li {
+  display: inline;
+}
+.Breadcrumb ul li::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f324";
+
+}

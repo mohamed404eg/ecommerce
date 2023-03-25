@@ -19,6 +19,8 @@ TtheadPordect.innerHTML += thAll;
 // thead end
 
 
+// Loop LocalStorage IN Prodect 
+function LoopLocalStorage() {
 
 
 
@@ -58,9 +60,9 @@ for (let i = 0; i < localStorage.length; i++) {
     let TbodyPordect = document.getElementById("TbodyPordect")
 
     // append tr to tbody
-    TbodyPordect.append(tr);
-
-
+        TbodyPordect.append(tr);
+   
+    
     let InputOrders = document.querySelectorAll(".inputOrders")
 
 
@@ -68,7 +70,7 @@ for (let i = 0; i < localStorage.length; i++) {
  // Total price
     function addAndUpdata() {
 
-        td5.innerHTML = `$${(dataProdect.price * InputOrders[i].value).toFixed(2), dataProdect.price * InputOrders[i].value} <button onclick="delet('${dataProdect.id}')">Delete </button>`;
+        td5.innerHTML = `$${(dataProdect.price * InputOrders[i].value).toFixed(2), dataProdect.price * InputOrders[i].value} <button class="delet" onclick="delet('${dataProdect.id}')">Delete </button>`;
     }
     // call this function in updata totele price
     addAndUpdata() 
@@ -101,7 +103,8 @@ for (let i = 0; i < localStorage.length; i++) {
                 localStorage.setItem(`${dataProdect.id}`, ToStraing)
                 
                  // call this function in updata totele price
-                addAndUpdata() 
+                 addAndUpdata() 
+              
             }
     
 
@@ -119,7 +122,10 @@ for (let i = 0; i < localStorage.length; i++) {
    
 
 }
+}
 
+window.addEventListener("DOMContentLoaded",LoopLocalStorage)
+    
 
 // *delete prodect
 function delet(index){
@@ -128,7 +134,13 @@ function delet(index){
         let dataProdect = JSON.parse(localStorage.getItem(localStorage.key(i)));
 
         if (dataProdect.id == index) {
-            localStorage.removeItem(index)
+            localStorage.removeItem(index);
+
+            // Loop LocalStorage prodect after delet
+            
+            let TbodyPordect = document.getElementById("TbodyPordect")
+            TbodyPordect.innerText = " ";
+            LoopLocalStorage();
         }
 
 
@@ -137,7 +149,6 @@ function delet(index){
 }
     
 
-let InputOrders = document.querySelectorAll(".inputOrders")
-console.log(InputOrders[1].getAttribute('index'));
+
 
 
