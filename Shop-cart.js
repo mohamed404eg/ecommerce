@@ -78,7 +78,7 @@ for (let i = 0; i < localStorage.length; i++) {
 
 
     // *UPdata Quantity
-    InputOrders[i].addEventListener("focusout", () => {
+    InputOrders[i].addEventListener("keyup", () => {
         
 
 
@@ -116,10 +116,35 @@ for (let i = 0; i < localStorage.length; i++) {
 
 
 
-    });
+    }
+    
+    
+    );
 
-   
-   
+
+
+  
+    // add btn to bottom
+    if (i +1 >= localStorage.length ) {
+        let tdend = document.createElement("td");
+        let trend = document.createElement("tr");
+        trend.className = "trend";
+        tdend.append(trend);
+        trend.innerHTML = `
+        <td class="tdend-TEMP"></td>
+        <td class="tdend-TEMP"></td>
+        <td class="tdend-TEMP"></td>
+        <td class="tdend-TEMP">  <bottom class="UpdateCart">Update Cart</bottom></td>
+       
+        <div class="btn-table-b">
+ 
+   <bottom class="ContinueShopping">Continue shopping</bottom>
+</div>`;
+TbodyPordect.append(trend)
+
+  }
+    
+
 
 }
 }
@@ -148,7 +173,6 @@ function delet(index){
     
 }
     
-
 
 
 
