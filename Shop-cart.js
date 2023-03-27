@@ -40,8 +40,8 @@ for (let i = 0; i < localStorage.length; i++) {
     let td5 = document.createElement("td");
   
 
-    td1.innerHTML = `<img class="imgProdect" src="${dataProdect.img}" alt=""> ${ dataProdect.title}`;
-    td2.innerHTML = `none`;
+    td1.innerHTML = `<img class="imgProdect" src="${dataProdect.img}" alt=""> <p class="Prodecttitle"> ${ dataProdect.title}</p>`;
+    td2.innerHTML = `<p class="Color-Size">none</p>`;
     td3.innerHTML = `<input class="inputOrders" index="${dataProdect.id}" type="number" value="${dataProdect.orders}"> ` ;
     td4.innerHTML = `$${dataProdect.price}`;
 
@@ -70,7 +70,7 @@ for (let i = 0; i < localStorage.length; i++) {
  // Total price
     function addAndUpdata() {
 
-        td5.innerHTML = `$${(dataProdect.price * InputOrders[i].value).toFixed(2), dataProdect.price * InputOrders[i].value} <button class="delet" onclick="delet('${dataProdect.id}')">Delete </button>`;
+        td5.innerHTML = `<p class="p-bottom">$${(dataProdect.price * InputOrders[i].value).toFixed(2), dataProdect.price * InputOrders[i].value} <button class="delet" onclick="delet('${dataProdect.id}')"><i class="fa-sharp fa-solid fa-circle-xmark"></i> </button></p>`;
     }
     // call this function in updata totele price
     addAndUpdata() 

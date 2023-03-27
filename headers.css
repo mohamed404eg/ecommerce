@@ -40,6 +40,7 @@ a {
   .container {
     max-width: 960px;
   }
+
 }
 @media (min-width: 1200px) {
   .container {
@@ -213,12 +214,22 @@ a {
     flex-direction: row;
     column-gap: 35px;
   }
+  .menu {
+    display: none;
+  }
+  .list ul {
+    display: flex;
+    flex-direction: row;
+    column-gap: 23px;
 }
+}
+
 
 @media screen and (max-width: 768px) {
   .container {
     max-width: 540px;
   }
+
 
   /* header */
   /* header Top */
@@ -316,4 +327,11 @@ a {
     align-items: center;
     justify-content: center;
   }
+  .headerTop {
+    display: flex;
+    justify-content: space-between;
+    width: 95% !important;
 }
+}
+
+
