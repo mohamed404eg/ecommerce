@@ -28,6 +28,11 @@
 .divTable {
   margin-bottom: 100px;
 }
+.tableCenter {
+  display: flex;
+  justify-content: center;
+}
+
 .table {
   margin-bottom: 14px;
 
@@ -37,8 +42,7 @@
     // max-width: min-content;
     */
   display: inline-block;
-  vertical-align: top;
-  max-width: 940px;
+  max-width: 100%;
 
   overflow-x: auto;
 
@@ -93,18 +97,14 @@
   position: relative;
   width: 97px;
 }
+
 .delet {
   border: none;
   background-color: #fff;
-  right: -86px;
-  position: absolute;
+
   cursor: pointer;
-
+  float: right;
 }
-
-
-
-
 
 /* Update Cart & Continue Shopping */
 .trend {
@@ -117,7 +117,7 @@
   display: flex;
   justify-content: right;
   padding-top: 15px;
- padding-bottom: 15px;
+  padding-bottom: 15px;
 }
 
 .ContinueShopping {
@@ -135,7 +135,7 @@
   cursor: pointer;
 }
 .UpdateCart {
-  border:  solid 1px #cccccc;
+  border: solid 1px #cccccc;
   width: 130px;
   height: 35px;
   display: flex;
@@ -146,7 +146,95 @@
   cursor: pointer;
 }
 
-
 .tdend-TEMP {
   border: none !important;
+}
+
+@media (min-width: 768px) {
+  .containerTABLE {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 954px) {
+  /* center table */
+  .table {
+    display: flex;
+    justify-content: center;
+  }
+
+  table {
+    border: 0;
+  }
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+  .Color-Size {
+    text-align: center;
+    display: inline;
+  }
+
+  /* Quantity span  */
+  .Quantity {
+    float: left;
+    margin-top: 4%;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  /* Total price vretical center; */
+  .p-bottom {
+    display: inline;
+  }
+
+  /* btn bottom */
+  .trend {
+    border: none;
+  }
+  .tdend-TEMP {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-table-b {
+    justify-content: center;
+  }
+  .ContinueShopping {
+    margin-left: 0;
+  }
 }
