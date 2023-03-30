@@ -99,7 +99,6 @@
 /* delete botton */
 .p-bottom {
   position: relative;
-
 }
 
 .delet {
@@ -201,6 +200,7 @@
   background-color: #3cb878;
   font-size: 14px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .coupon input {
@@ -229,6 +229,7 @@
   background-color: #3cb878;
   font-size: 14px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .gift input {
@@ -349,6 +350,7 @@
   text-transform: uppercase;
   border: solid 1px #cccccc;
   background-color: #fff;
+  cursor: pointer;
 }
 
 /* calcuation */
@@ -365,24 +367,30 @@
   text-transform: uppercase;
 }
 
-
 .calcuation-3 {
   border: solid 1px #a3a2a3;
-
 }
-.SubtotalDIV{
+.SubtotalDIV {
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.CouponDIV{
+.CouponDIV {
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.ShippingDIV{
+.ShippingDIV {
   padding: 21px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .calcuation-Totaldiv {
+  display: flex;
+  justify-content: space-between;
   border: solid 1px #a3a2a3;
   padding: 30px;
 }
@@ -400,8 +408,8 @@
   float: right;
   padding-left: 20px;
   padding-right: 20px;
+  cursor: pointer;
 }
-
 
 @media (min-width: 768px) {
   .containerTABLE {
@@ -470,11 +478,10 @@
     text-transform: uppercase;
     padding-right: 6px;
   }
-/* Quantity display none in width medium  */
-.Quantity {
-  display: block;
-}
-
+  /* Quantity display none in width medium  */
+  .Quantity {
+    display: block;
+  }
 
   /* Total price vretical center; */
   .p-bottom {
@@ -499,26 +506,15 @@
 }
 
 @media screen and (max-width: 768px) {
-
   .ProceedToCheckout {
-    width: 100%;}
-
-
- }
-
-
-
-
-
-
- @media screen and (max-width: 500px) {
-
+    width: 100%;
+  }
 }
 
-
+@media screen and (max-width: 500px) {
+}
 
 @media screen and (max-width: 360px) {
-
   .mid-section {
     height: auto;
     display: flex;
@@ -526,10 +522,10 @@
     /* justify-content: stretch; */
     flex-direction: column;
     justify-content: center;
-    width: 320px   !important;
+    width: 320px !important;
     /* align-items: center; */
     text-align: center;
-}
+  }
   .F-social-icon::before {
     content: "";
     width: 0;
@@ -548,41 +544,41 @@
     right: -20px;
     bottom: -13px;
   }
-  
 
   /* gift coupon */
   .gift-coupon {
     flex-direction: column;
-}
-.coupon {
-  max-width: 100%;
-  flex-basis: 100%;
-  /* float: left; */
-  border-collapse: collapse;
-}
-.gift {
-  max-width: 100%;
-  flex-basis: 100%;
-  /* float: right; */
-}
-/* calcuation Availability */
-.calcuation-Availability {
-  display: flex;
-  justify-content: space-between;
-  column-gap: 30px;
-  box-sizing: border-box;
-  margin-bottom: 185px;
-  flex-direction: column;
-}
-.Availability {
-  max-width: 100%;
-  flex-basis: 100%;
-}
-.calcuation {
-  max-width: 100%;
-  flex-basis: 100%;
-  border-collapse: collapse;
-  color: #000;
-}
+  }
 
+  .coupon {
+    max-width: 100%;
+    flex-basis: 100%;
+    /* float: left; */
+    border-collapse: collapse;
+  }
+
+  .gift {
+    max-width: 100%;
+    flex-basis: 100%;
+    /* float: right; */
+  }
+  /* calcuation Availability */
+  .calcuation-Availability {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+    box-sizing: border-box;
+    margin-bottom: 185px;
+    flex-direction: column;
+  }
+  .Availability {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+  .calcuation {
+    max-width: 100%;
+    flex-basis: 100%;
+    border-collapse: collapse;
+    color: #000;
+  }
 }

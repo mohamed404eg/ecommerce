@@ -143,7 +143,7 @@
             <div class="coupon-border">
 
 
-                <input type="text" value="" placeholder="Enter your coupon here"> <button>Apply</button>
+                <input type="text" value="" placeholder="Enter your coupon here"> <button onclick="Subtotal()">Apply</button>
             </div>
             </div>
 
@@ -175,9 +175,9 @@
 
         
     <label for="Country">Select Country</label>
-    <select name="Country" id="Country">
+    <select onclick="Subtotal()" name="Country" id="Country">
         <option value="us">us</option>
-        <option value="us">Egypt</option>
+        <option value="Egypt">Egypt</option>
     </select>
 
 </div>
@@ -209,13 +209,13 @@
     
         <p class="calcuationP">Shopping cart calcuation</p>
 <div class="calcuation-3">
- <div class="SubtotalDIV">  <span>Subtotal</span><span>3213</span></div> 
- <div class="CouponDIV">   <span>Coupon</span><span>3213</span></div> 
- <div class="ShippingDIV">   <span>Shipping</span><span>-42</span></div> 
+ <div class="SubtotalDIV">  <span>Subtotal</span><span class="SubtotalNUM">0</span></div> 
+ <div class="CouponDIV">   <span>Coupon</span><span class="CouponNUM">0</span></div> 
+ <div class="ShippingDIV">   <span>Shipping</span><span class="ShippingNUM">0</span></div> 
 
 </div>
 <div class="calcuation-Totaldiv">
-    <span>Total</span> <span>2332</span>
+    <span>Total</span> <span class="calcuationTotal">0</span>
 </div>
 
 
