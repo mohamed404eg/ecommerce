@@ -1,0 +1,234 @@
+
+/* footer */
+footer {
+    height: 459px;
+  }
+  
+  /* social  and text*/
+  
+  .SOCIAL-CONNECTION {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Text */
+  .footerTextInSocial {
+    font-size: 14px;
+  }
+  /* social */
+  .F-social-icon {
+    color: #fff;
+    display: flex;
+    column-gap: 29px;
+    position: relative;
+  }
+  .F-social-icon::before {
+    content: "";
+    width: 1px;
+    height: 45px;
+    background-color: #eeeeee;
+    position: absolute;
+    left: -20px;
+    bottom: -13px;
+  }
+  .F-social-icon::after {
+    content: "";
+    width: 1px;
+    height: 45px;
+    background-color: #eeeeee;
+    position: absolute;
+    right: -20px;
+    bottom: -13px;
+  }
+  .F-social-icon i {
+    color: #000;
+    font-size: 16px;
+  }
+  
+  .F-social-icon-Line {
+    width: 100%;
+    height: 1px;
+    background-color: #eeeeee;
+    display: block;
+  }
+  
+  /* footer mid section */
+  .mid-section {
+    height: 340px;
+    display: flex;
+    padding-top: 54px;
+    justify-content: space-around;
+  }
+  .mid-section p {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .mid-section ul {
+    padding: 0;
+  }
+  .mid-section ul li {
+    margin-bottom: 22px;
+  }
+  .mid-section ul li a {
+    color: #000;
+  }
+  .address p {
+    font-weight: 200;
+  }
+  .address i {
+    color: #000;
+  }
+  .address p:nth-child(3) {
+    color: var(---green);
+  }
+  
+
+  .footerBottom {
+    width: 100%;
+    background-color: #000;
+    z-index: 100;
+  }
+  /* by */
+  .by {
+    width: auto;
+    background-color: #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10px;
+  }
+  .Copyright p {
+    color: #777777;
+    font-size: 14px;
+  }
+  .by img {
+    width: 45px;
+    height: 29px;
+  }
+  .Copyright a {
+    color: #ccc;
+  }
+  
+
+  
+@media screen and (max-width: 992px) {
+ 
+    footer {
+      height: auto;
+    }
+
+  }
+  @media screen and (max-width: 768px) {
+
+  
+    /* footer */
+    .SOCIAL-CONNECTION {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+    }
+  
+    /* footer */
+    footer {
+      height: auto;
+    }
+    .mid-section {
+      height: auto;
+      display: flex;
+      padding-top: 54px;
+      /* justify-content: stretch; */
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      align-items: center;
+      text-align: center;
+    }
+    .mid-section ul {
+      padding-left: 0;
+    }
+  
+    
+   }
+
+   @media screen and (max-width: 500px) {
+    .SOCIAL-CONNECTION {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+     position: relative;
+   }
+   .by {
+     width: 96%;
+     background-color: #000;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-direction: column;
+   }
+   
+   /* footer */
+   footer {
+     height: auto;
+     width: 100%;
+   }
+   .mid-section {
+     height: auto;
+     display: flex;
+     padding-top: 54px;
+     /* justify-content: stretch; */
+     flex-direction: column;
+     justify-content: center;
+     width: 100%;
+     align-items: center;
+   }
+   .mid-section ul {
+     padding-left: 0;
+   }
+   }
+   
+   @media screen and (max-width: 425px) {
+    footer {
+      height: auto;
+      width: 100%;
+  }
+  }
+
+   @media screen and (max-width: 360px) {
+   
+     .mid-section {
+       height: auto;
+       display: flex;
+       padding-top: 54px;
+       /* justify-content: stretch; */
+       flex-direction: column;
+       justify-content: center;
+       width: 97%;
+       /* align-items: center; */
+       text-align: center;
+     }
+     .F-social-icon::before {
+       content: "";
+       width: 0;
+       height: 0;
+       background-color: #eeeeee;
+       position: absolute;
+       left: -20px;
+       bottom: -13px;
+     }
+     .F-social-icon::after {
+       content: "";
+       width: 0;
+       height: 0;
+       background-color: #eeeeee;
+       position: absolute;
+       right: -20px;
+       bottom: -13px;
+     }
+     
+   }

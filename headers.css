@@ -265,7 +265,7 @@ a {
 
 @media screen and (max-width: 500px) {
   .container {
-    max-width: 360px;
+    max-width: 495px;
   }
   .Number span {
     color: #fff;
@@ -335,3 +335,21 @@ a {
 }
 
 
+
+
+
+@media screen and (max-width: 320px) { 
+  .container {
+    max-width: 93%;
+}
+.fa-phone {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 17px;
+}
+.fa-envelope {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 17px;
+}
+}
