@@ -178,15 +178,15 @@ footer {
      width: 100%;
    }
    .mid-section {
-     height: auto;
-     display: flex;
-     padding-top: 54px;
-     /* justify-content: stretch; */
-     flex-direction: column;
-     justify-content: center;
-     width: 100%;
-     align-items: center;
-   }
+    height: auto;
+    display: flex;
+    padding-top: 54px;
+    /* justify-content: stretch; */
+    flex-direction: column;
+    justify-content: center;
+    width: 91%;
+    align-items: center;
+}
    .mid-section ul {
      padding-left: 0;
    }

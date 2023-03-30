@@ -208,20 +208,79 @@ a {
   margin-top: -15px;
 }
 
-@media screen and (max-width: 992px) {
-  .list ul {
-    display: flex;
-    flex-direction: row;
-    column-gap: 35px;
-  }
+
+@media screen and (min-width: 992px) { 
   .menu {
     display: none;
   }
-  .list ul {
-    display: flex;
-    flex-direction: row;
-    column-gap: 23px;
+  .listMenu {
+    display: none;
+  }
 }
+
+@media screen and (max-width: 992px) {
+  .menu {
+    display: inline;
+  }
+  .list {
+    display: none;
+  }
+
+  /* moblie menu */
+  .listMenuToggle{ 
+    transform: translateX(0) !important;
+  }
+.listMenu{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 100;
+margin: 0;
+padding: 0;
+transform: translateX(100%);
+transition: ease 500ms;
+}
+.fa-xmark {
+  float: right;
+  padding-top: 110px;
+  padding-right: 33px;
+}
+.listMenu .ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 147px;
+}
+.listMenu .ul ul li {
+  padding-top: 30px;
+}
+
+.ul ul li a {
+  color: #3f4853;
+  position: relative;
+  transition: ease 400ms;
+  font-size: 20px;
+}
+.ulul li a:active {
+  color: #3cb878;
+}
+
+.ul ul li a::after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #3cb878;
+  bottom: -3px;
+  left: 0;
+  transition: ease 400ms;
+}
+.ul li a:hover::after {
+  width: 100%;
+}
+
+
 }
 
 
@@ -265,7 +324,7 @@ a {
 
 @media screen and (max-width: 500px) {
   .container {
-    max-width: 495px;
+    max-width: 462px;
   }
   .Number span {
     color: #fff;
