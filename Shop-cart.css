@@ -526,10 +526,10 @@
     /* justify-content: stretch; */
     flex-direction: column;
     justify-content: center;
-    width: 97%;
+    width: 320px   !important;
     /* align-items: center; */
     text-align: center;
-  }
+}
   .F-social-icon::before {
     content: "";
     width: 0;
@@ -549,9 +549,7 @@
     bottom: -13px;
   }
   
-}
 
-@media screen and (max-width: 320px) {
   /* gift coupon */
   .gift-coupon {
     flex-direction: column;
