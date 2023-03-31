@@ -193,6 +193,9 @@ a {
   flex-direction: row;
   column-gap: 30px;
 }
+.cart a{
+ color: #000;
+}
 .cart div {
   cursor: pointer;
 }

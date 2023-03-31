@@ -1,0 +1,22 @@
+
+/* Breadcrumb  */
+.Breadcrumb {
+    padding-top: 50px;
+    padding-bottom: 39px;
+    max-width: 940px !important;
+  }
+  
+  .Breadcrumb li {
+    display: inline;
+    color: var(---green);
+  }
+  .Breadcrumb ul li a {
+    color: #000;
+  }
+  .Breadcrumb ul li a::after {
+    font-family: "FontAwesome 5 Free";
+    font-weight: 900;
+    content: "\27A6";
+    color: #000;
+  }
+  
