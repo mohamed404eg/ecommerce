@@ -181,11 +181,12 @@ footer {
     height: auto;
     display: flex;
     padding-top: 54px;
-    /* justify-content: stretch; */
     flex-direction: column;
     justify-content: center;
     width: 91%;
     align-items: center;
+    margin:0;
+
 }
    .mid-section ul {
      padding-left: 0;

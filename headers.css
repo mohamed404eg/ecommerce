@@ -40,7 +40,6 @@ a {
   .container {
     max-width: 960px;
   }
-
 }
 @media (min-width: 1200px) {
   .container {
@@ -193,8 +192,8 @@ a {
   flex-direction: row;
   column-gap: 30px;
 }
-.cart a{
- color: #000;
+.cart a {
+  color: #000;
 }
 .cart div {
   cursor: pointer;
@@ -211,8 +210,7 @@ a {
   margin-top: -15px;
 }
 
-
-@media screen and (min-width: 992px) { 
+@media screen and (min-width: 992px) {
   .menu {
     display: none;
   }
@@ -230,71 +228,67 @@ a {
   }
 
   /* moblie menu */
-  .listMenuToggle{ 
+  .listMenuToggle {
     transform: translateX(0) !important;
   }
   .menuclose {
     cursor: pointer;
   }
-.listMenu{
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background-color: #fff;
-  z-index: 100;
-margin: 0;
-padding: 0;
-transform: translateX(100%);
-transition: ease 500ms;
-}
-.fa-xmark {
-  float: right;
-  padding-top: 110px;
-  padding-right: 33px;
-}
-.listMenu .ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 147px;
-}
-.listMenu .ul ul li {
-  padding-top: 30px;
-}
+  .listMenu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    transform: translateX(100%);
+    transition: ease 500ms;
+  }
+  .fa-xmark {
+    float: right;
+    padding-top: 110px;
+    padding-right: 33px;
+  }
+  .listMenu .ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 147px;
+  }
+  .listMenu .ul ul li {
+    padding-top: 30px;
+  }
 
-.ul ul li a {
-  color: #3f4853;
-  position: relative;
-  transition: ease 400ms;
-  font-size: 20px;
-}
-.ulul li a:active {
-  color: #3cb878;
-}
+  .ul ul li a {
+    color: #3f4853;
+    position: relative;
+    transition: ease 400ms;
+    font-size: 20px;
+  }
+  .ulul li a:active {
+    color: #3cb878;
+  }
 
-.ul ul li a::after {
-  content: " ";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background-color: #3cb878;
-  bottom: -3px;
-  left: 0;
-  transition: ease 400ms;
+  .ul ul li a::after {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #3cb878;
+    bottom: -3px;
+    left: 0;
+    transition: ease 400ms;
+  }
+  .ul li a:hover::after {
+    width: 100%;
+  }
 }
-.ul li a:hover::after {
-  width: 100%;
-}
-
-
-}
-
 
 @media screen and (max-width: 768px) {
   .container {
     max-width: 540px;
   }
-
 
   /* header */
   /* header Top */
@@ -330,7 +324,7 @@ transition: ease 500ms;
 
 @media screen and (max-width: 500px) {
   .container {
-    max-width: 462px;
+    max-width: 93%;
   }
   .Number span {
     color: #fff;
@@ -396,25 +390,21 @@ transition: ease 500ms;
     display: flex;
     justify-content: space-between;
     width: 95% !important;
+  }
 }
-}
 
-
-
-
-
-@media screen and (max-width: 320px) { 
+@media screen and (max-width: 320px) {
   .container {
-    max-width: 93%;
-}
-.fa-phone {
-  color: #fff;
-  font-size: 16px;
-  margin-right: 17px;
-}
-.fa-envelope {
-  color: #fff;
-  font-size: 16px;
-  margin-right: 17px;
-}
+    max-width: 93% !important;
+  }
+  .fa-phone {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 17px;
+  }
+  .fa-envelope {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 17px;
+  }
 }
