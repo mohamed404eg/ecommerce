@@ -125,11 +125,17 @@
           <p class="BillingP">Billing Details</p>
           <div class="inputName">
             <div class="FirstName">
-            <label for="first">First Name <span class="required">*</span></label>
-            <input type="text" name="first" value="" required />
-        </div><div class="LastName">
-            <label for="last">Last Name <span class="required">*</span></label>
-            <input type="text" name="last" value="" required /></div>
+              <label for="first"
+                >First Name <span class="required">*</span></label
+              >
+              <input type="text" name="first" value="" required />
+            </div>
+            <div class="LastName">
+              <label for="last"
+                >Last Name <span class="required">*</span></label
+              >
+              <input type="text" name="last" value="" required />
+            </div>
           </div>
           <div class="CountryDIV">
             <label for="">Country<span class="required">*</span></label>
@@ -148,11 +154,11 @@
           <div class="AddressDiv">
             <label for="Address">Address <span class="required">*</span></label>
             <input
-            type="text"
-            value=""
-            name="Address"
-            required
-            placeholder="Street address"
+              type="text"
+              value=""
+              name="Address"
+              required
+              placeholder="Street address"
             />
           </div>
           <!--\\ Address \\-->
@@ -164,8 +170,16 @@
           <!--\\ Postcode \\-->
           <!-- City -->
           <div class="CityDIV">
-            <label for="City">Town / City <span class="required">*</span></label>
-            <input type="text" name="City" id="" placeholder="Town / City" required />
+            <label for="City"
+              >Town / City <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              name="City"
+              id=""
+              placeholder="Town / City"
+              required
+            />
           </div>
           <!--\\ City \\-->
           <!-- Email-Phone -->
@@ -186,8 +200,7 @@
         </form>
         <!-- Check -->
         <div class="Check">
-
-          <input type="checkbox" name="Check" id="" value="Check">
+          <input type="checkbox" name="Check" id="" value="Check" />
           <label for="Check"> Create an account?</label>
         </div>
         <!--\\ Check \\-->
@@ -195,24 +208,37 @@
       <!--\\ Email-Phone \\-->
       <!-- div one end -->
 
-
-
       <!-- div TOW Start -->
-      <div class="order">
-        <div>
-          <p>Your order</p>
+      <div  class="order-up">
 
+      
+      <div class="order">
+        <p class="orderP">Your order</p>
+        <div>
+          <!-- Content Total -->
           <div class="Content-Total">
-            <div><span>Product</span> <span>Total</span></div>
-            <div>
+            <div class="Product-Total">
+              <span>Product</span> <span>Total</span>
+            </div>
+            <!-- order Prodect Price -->
+            <div class="order-Prodect-Price">
               <span>Casual men wearing cool shoe x 1</span> <span>120$</span>
             </div>
-            <div><span>Subtotal</span><span>400</span></div>
-            <div><span>Shipping</span><span>Free Shipping</span></div>
-            <div><span>Total</span><span>$ 400</span></div>
-          </div>
-        </div>
+            <!--\\ order Prodect Price \\-->
+            <!-- Subtotal and Shipping -->
+            <div class="Subtotal-Shipping">
+              <div class="Subtotal"><span>Subtotal</span><span>400</span></div>
+              <div class="Shipping">
+                <span>Shipping</span><span>Free Shipping</span>
+              </div>
+            </div>
+            <!--\\ Subtotal and Shipping \\-->
 
+            <div class="Total"><span>Total</span><span>$ 400</span></div>
+          </div>
+          <!--\\ Content Total \\-->
+        </div>
+        <!-- pay -->
         <div class="pay">
           <div class="DirectBankDIV">
             <input
@@ -230,24 +256,39 @@
             </p>
           </div>
         </div>
-
+        <!--\\ pay \\-->
+        <!-- Cheque Payment -->
         <div class="ChequeDIV">
           <input
             type="checkbox"
             name="ChequePayment"
             id=""
             value="Cheque Payment"
-          />
-          <label for="ChequePayment">Cheque Payment</label>
-        </div>
-
-        <div class="PaypalDIV">
-          <input type="checkbox" name="Paypal" id="" value="Paypal" />
-          <label for="Paypal">Paypal</label>
-        </div>
+            />
+            <label for="ChequePayment">Cheque Payment</label>
+          </div>
+          <!--\\ Cheque Payment \\-->
+          <!-- Paypal -->
+          <div class="PaypalDIV">
+            <input type="checkbox" name="Paypal" id="" value="Paypal" />
+            <label for="Paypal">Paypal</label>
+          </div>
+          <!--\\ Paypal \\-->
+         
       </div>
-    </div>
 
+      <!-- Place order -->
+      <div class="PlaceOrder">
+        <button>Place order</button>
+      </div>
+      <!--\\ Place order \\-->
+
+
+    </div>
+<!--\\ order \\-->
+    
+    </div>
+<!--\\ order-up \\-->
     <!-- footer -->
 
     <footer class="">

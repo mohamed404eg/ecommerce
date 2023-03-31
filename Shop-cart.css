@@ -410,6 +410,9 @@
   padding-right: 20px;
   cursor: pointer;
 }
+.ProceedToCheckout a {
+  color: #fff;
+}
 
 @media (min-width: 768px) {
   .containerTABLE {

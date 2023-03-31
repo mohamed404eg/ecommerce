@@ -1,6 +1,8 @@
 :root {
-  --border:#a3a2a3;
-  --label:#323232;
+  --border: #a3a2a3;
+  --border-order: #a3a2a3;
+  --label: #323232;
+  --Poppins: "Poppins", sans-serif;
 }
 
 /* Breadcrumb  */
@@ -16,12 +18,11 @@
 }
 .Breadcrumb ul li a {
   color: #000;
-
 }
 
-.Breadcrumb ul{
-    margin: 0;
-    padding: 0;
+.Breadcrumb ul {
+  margin: 0;
+  padding: 0;
 }
 
 .Breadcrumb ul li a::after {
@@ -37,99 +38,93 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  column-gap: 29px;
 }
 .BillingDIV {
   max-width: 70%;
   flex-basis: 70%;
-  background-color: #eee;
 }
 
 /* Billing */
-.BillingP{
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    text-transform: uppercase;
-
+.BillingP {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 /* input Name */
 .inputName {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 /* color red to * */
 label .required {
-    color: red;
-    content: " *";
-  }
+  color: red;
+  content: " *";
+}
 
-  /* label all */
-  label {
-    color: var(--label);
- 
-  }
-  /* BillingDIV input border all */
-  .BillingDIV input {
-    border: 1px solid #a3a2a3;
-    padding-left: 12px ;
-  }
+/* label all */
+label {
+  color: var(--label);
+}
+/* BillingDIV input border all */
+.BillingDIV input {
+  border: 1px solid #a3a2a3;
+  padding-left: 12px;
+}
 /* Firs tName */
 
 .inputName div:nth-child(1) {
-    max-width: 48%;
-    flex-basis: 48%;
-   
+  max-width: 48%;
+  flex-basis: 48%;
 }
 .FirstName {
-    display: flex;
-    flex-direction: column;
-    row-gap: 15px;
- 
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
 }
-.FirstName label{
-    font-size: 14px;
-    color: #242628;
+.FirstName label {
+  font-size: 14px;
+  color: #242628;
 }
 
-.FirstName input{
-    height: 40px;
-    border: solid 1px #a3a2a3 ;
-    padding-left: 10px;
-    outline: none;
+.FirstName input {
+  height: 40px;
+  border: solid 1px #a3a2a3;
+  padding-left: 10px;
+  outline: none;
 }
 
 /* Last Name */
 .inputName div:nth-child(2) {
-    max-width: 48%;
-    flex-basis: 48%;
+  max-width: 48%;
+  flex-basis: 48%;
 }
 
 .LastName {
-    display: flex;
-    flex-direction: column;
-    row-gap: 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
 }
-.LastName label{
-    font-size: 14px;
-    color: #242628;
+.LastName label {
+  font-size: 14px;
+  color: #242628;
 }
-.LastName input{
-    height: 40px;
-    border: solid 1px #a3a2a3 ;
-    padding-left: 10px;
-    outline: none;
+.LastName input {
+  height: 40px;
+  border: solid 1px #a3a2a3;
+  padding-left: 10px;
+  outline: none;
 }
-
 
 /* CountryDIV */
-.CountryDIV
-{
+.CountryDIV {
   width: 100%;
   display: flex;
-    flex-direction: column;
-    row-gap: 12px;
-    margin-top: 20px;
+  flex-direction: column;
+  row-gap: 12px;
+  margin-top: 20px;
 }
 
 .CountryDIV select {
@@ -138,13 +133,12 @@ label .required {
 }
 
 /* CompanyNameDiv */
-.CompanyNameDiv
-{
+.CompanyNameDiv {
   width: 100%;
   display: flex;
-    flex-direction: column;
-    row-gap: 12px;
-    margin-top: 20px;
+  flex-direction: column;
+  row-gap: 12px;
+  margin-top: 20px;
 }
 
 .CompanyNameDiv input {
@@ -152,15 +146,13 @@ label .required {
   border: solid 1px var(--border);
 }
 
-
 /* AddressDiv */
-.AddressDiv
-{
+.AddressDiv {
   width: 100%;
   display: flex;
-    flex-direction: column;
-    row-gap: 12px;
-    margin-top: 20px;
+  flex-direction: column;
+  row-gap: 12px;
+  margin-top: 20px;
 }
 
 .AddressDiv input {
@@ -168,18 +160,13 @@ label .required {
   border: solid 1px var(--border);
 }
 
-
-
-
-
 /* PostcodeDIV */
-.PostcodeDIV
-{
+.PostcodeDIV {
   width: 100%;
   display: flex;
-    flex-direction: column;
-    row-gap: 12px;
-    margin-top: 20px;
+  flex-direction: column;
+  row-gap: 12px;
+  margin-top: 20px;
 }
 
 .PostcodeDIV input {
@@ -187,15 +174,13 @@ label .required {
   border: solid 1px var(--border);
 }
 
-
 /* PostcodeDIV */
-.CityDIV
-{
+.CityDIV {
   width: 100%;
   display: flex;
-    flex-direction: column;
-    row-gap: 12px;
-    margin-top: 20px;
+  flex-direction: column;
+  row-gap: 12px;
+  margin-top: 20px;
 }
 
 .CityDIV input {
@@ -203,41 +188,33 @@ label .required {
   border: solid 1px var(--border);
 }
 
-
-
 /* Email-Phone */
 .Email-Phone {
-display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
 }
-
-
 
 /* Email */
 
 .Email-Phone div:nth-child(1) {
   max-width: 48%;
   flex-basis: 48%;
-
- 
 }
 .Email {
   display: flex;
   flex-direction: column;
   row-gap: 15px;
-  
-
 }
-.Email label{
+.Email label {
   font-size: 14px;
   color: #242628;
 }
 
-.Email input{
+.Email input {
   height: 40px;
-  border: solid 1px #a3a2a3 ;
+  border: solid 1px #a3a2a3;
   padding-left: 10px;
   outline: none;
 }
@@ -253,22 +230,19 @@ display: flex;
   flex-direction: column;
   row-gap: 15px;
 }
-.Phone label{
+.Phone label {
   font-size: 14px;
   color: #242628;
 }
-.Phone input{
+.Phone input {
   height: 40px;
-  border: solid 1px #a3a2a3 ;
+  border: solid 1px #a3a2a3;
   padding-left: 10px;
   outline: none;
 }
 
-
-
 /* Check */
-.Check
-{
+.Check {
   margin-top: 29px;
   font-size: 14px;
   color: #232323;
@@ -278,9 +252,133 @@ display: flex;
   border-radius: 0;
 }
 
-
-/* orderc */
-.order {
+/* order */
+.order-up {
   max-width: 48%;
   flex-basis: 48%;
+  margin-bottom: 177px;
+}
+.order {
+  border: solid 1px #a3a2a3;
+  padding: 35px 22px 28px 33px;
+}
+
+.orderP {
+  font-family: var(--Poppins);
+  font-size: 14px;
+  margin: 0;
+}
+
+.Content-Total {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Product Total */
+.Product-Total {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px var(--border-order);
+  padding-bottom: 12px;
+  padding-top: 44px;
+}
+
+/** order Prodect Price */
+.order-Prodect-Price {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: solid 2px #e3e3e3;
+}
+
+/* Subtotal and Shipping */
+.Subtotal-Shipping {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  padding-top: 25px;
+  padding-bottom: 38px;
+  border-bottom: solid 1px var(--border-order);
+}
+
+/* Subtotal */
+.Subtotal {
+  display: flex;
+  justify-content: space-between;
+}
+/* Shipping */
+.Shipping {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Total */
+.Total {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 29px;
+  padding-bottom: 29px;
+  border-bottom: solid 1px #a3a2a3;
+}
+
+/* pay */
+.pay {
+  padding-top: 33px;
+}
+
+.DirectBankDIV p {
+  background-color: #f8f8f8;
+  padding: 15px 15px 15px 20px;
+  margin-top: 19px;
+  margin-bottom: 0;
+}
+
+/*  Cheque Payment */
+.ChequeDIV {
+  padding-top: 23px;
+}
+
+/* Paypal */
+
+.PaypalDIV {
+  padding-top: 24px;
+}
+
+/* Place Order */
+.PlaceOrder {
+  float: right;
+  margin-top: 12px;
+}
+.PlaceOrder button {
+  width: 135px;
+  height: 36px;
+  border: none;
+  background-color: var(---green);
+  font-family: var(--Poppins);
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 600px) {
+  .DivForm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    column-gap: 29px;
+}
+/* Billing */
+.BillingDIV {
+  max-width: 100%;
+  flex-basis: 100%;
+  margin-bottom: 100px;
+}
+/* order-up */
+.order-up {
+  max-width: 100%;
+  flex-basis: 100%;
+  margin-bottom: 177px;
+}
 }
