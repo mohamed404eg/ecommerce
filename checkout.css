@@ -1,22 +1,286 @@
+:root {
+  --border:#a3a2a3;
+  --label:#323232;
+}
 
 /* Breadcrumb  */
 .Breadcrumb {
-    padding-top: 50px;
-    padding-bottom: 39px;
-    max-width: 940px !important;
+  padding-top: 50px;
+  padding-bottom: 39px;
+}
+
+.Breadcrumb li {
+  display: inline;
+  color: var(---green);
+  padding-right: 5px;
+}
+.Breadcrumb ul li a {
+  color: #000;
+
+}
+
+.Breadcrumb ul{
+    margin: 0;
+    padding: 0;
+}
+
+.Breadcrumb ul li a::after {
+  font-family: "FontAwesome 5 Free";
+  font-weight: 900;
+  content: "\27A6";
+  color: #000;
+  padding-left: 5px;
+}
+
+/* DivForm */
+.DivForm {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.BillingDIV {
+  max-width: 70%;
+  flex-basis: 70%;
+  background-color: #eee;
+}
+
+/* Billing */
+.BillingP{
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+
+}
+/* input Name */
+.inputName {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* color red to * */
+label .required {
+    color: red;
+    content: " *";
   }
+
+  /* label all */
+  label {
+    color: var(--label);
+ 
+  }
+  /* BillingDIV input border all */
+  .BillingDIV input {
+    border: 1px solid #a3a2a3;
+    padding-left: 12px ;
+  }
+/* Firs tName */
+
+.inputName div:nth-child(1) {
+    max-width: 48%;
+    flex-basis: 48%;
+   
+}
+.FirstName {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+ 
+}
+.FirstName label{
+    font-size: 14px;
+    color: #242628;
+}
+
+.FirstName input{
+    height: 40px;
+    border: solid 1px #a3a2a3 ;
+    padding-left: 10px;
+    outline: none;
+}
+
+/* Last Name */
+.inputName div:nth-child(2) {
+    max-width: 48%;
+    flex-basis: 48%;
+}
+
+.LastName {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+.LastName label{
+    font-size: 14px;
+    color: #242628;
+}
+.LastName input{
+    height: 40px;
+    border: solid 1px #a3a2a3 ;
+    padding-left: 10px;
+    outline: none;
+}
+
+
+/* CountryDIV */
+.CountryDIV
+{
+  width: 100%;
+  display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    margin-top: 20px;
+}
+
+.CountryDIV select {
+  height: 40px;
+  border: solid 1px var(--border);
+}
+
+/* CompanyNameDiv */
+.CompanyNameDiv
+{
+  width: 100%;
+  display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    margin-top: 20px;
+}
+
+.CompanyNameDiv input {
+  height: 40px;
+  border: solid 1px var(--border);
+}
+
+
+/* AddressDiv */
+.AddressDiv
+{
+  width: 100%;
+  display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    margin-top: 20px;
+}
+
+.AddressDiv input {
+  height: 40px;
+  border: solid 1px var(--border);
+}
+
+
+
+
+
+/* PostcodeDIV */
+.PostcodeDIV
+{
+  width: 100%;
+  display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    margin-top: 20px;
+}
+
+.PostcodeDIV input {
+  height: 40px;
+  border: solid 1px var(--border);
+}
+
+
+/* PostcodeDIV */
+.CityDIV
+{
+  width: 100%;
+  display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    margin-top: 20px;
+}
+
+.CityDIV input {
+  height: 40px;
+  border: solid 1px var(--border);
+}
+
+
+
+/* Email-Phone */
+.Email-Phone {
+display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+
+/* Email */
+
+.Email-Phone div:nth-child(1) {
+  max-width: 48%;
+  flex-basis: 48%;
+
+ 
+}
+.Email {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
   
-  .Breadcrumb li {
-    display: inline;
-    color: var(---green);
-  }
-  .Breadcrumb ul li a {
-    color: #000;
-  }
-  .Breadcrumb ul li a::after {
-    font-family: "FontAwesome 5 Free";
-    font-weight: 900;
-    content: "\27A6";
-    color: #000;
-  }
-  
+
+}
+.Email label{
+  font-size: 14px;
+  color: #242628;
+}
+
+.Email input{
+  height: 40px;
+  border: solid 1px #a3a2a3 ;
+  padding-left: 10px;
+  outline: none;
+}
+
+/* Phone */
+.Email-Phone div:nth-child(2) {
+  max-width: 48%;
+  flex-basis: 48%;
+}
+
+.Phone {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.Phone label{
+  font-size: 14px;
+  color: #242628;
+}
+.Phone input{
+  height: 40px;
+  border: solid 1px #a3a2a3 ;
+  padding-left: 10px;
+  outline: none;
+}
+
+
+
+/* Check */
+.Check
+{
+  margin-top: 29px;
+  font-size: 14px;
+  color: #232323;
+}
+.Check input {
+  border: solid 1px var(--border);
+  border-radius: 0;
+}
+
+
+/* orderc */
+.order {
+  max-width: 48%;
+  flex-basis: 48%;
+}

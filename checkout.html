@@ -25,25 +25,22 @@
     ></script>
   </head>
   <body>
+    <!-- list Menu moblie -->
+    <div class="listMenu">
+      <i class="fa-sharp fa-solid fa-xmark fa-lg menuclose"></i>
 
-          <!-- list Menu moblie -->
-  <div class="listMenu">
-    <i class="fa-sharp fa-solid fa-xmark fa-lg menuclose"></i>
-
-    <div class="ul">
-    <ul>
-      <li> <a href="#">Home</a> </li>
-   <li>  <a href="">WOMEN</a>   </li>
-     <li> <a href="">Men</a>  </li>
-   <li>  <a href="">Kids</a>   </li>
-    <li> <a href="">Jewellery</a>  </li>
-   <li>  <a href="">Accessories</a>   </li>
-    </ul>
-</div>
-
-
-</div>
-  <!-- list Menu moblie end -->
+      <div class="ul">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="">WOMEN</a></li>
+          <li><a href="">Men</a></li>
+          <li><a href="">Kids</a></li>
+          <li><a href="">Jewellery</a></li>
+          <li><a href="">Accessories</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- list Menu moblie end -->
     <!-- header start -->
 
     <header id="header">
@@ -94,7 +91,9 @@
 
         <div class="cart">
           <div class="">
-        <a href="./Shop-cart.html"><i  class="fa-solid fa-cart-shopping"></i></a>    
+            <a href="./Shop-cart.html"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
             <span class="cart-Number">3</span>
           </div>
           <div>
@@ -108,21 +107,145 @@
     </header>
 
     <!-- header end -->
-
     <div class="Breadcrumb container">
       <!-- Breadcrumb -->
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="./">Home</a></li>
         <li><a href="#">Page</a></li>
         <li><a href="#">Shop</a></li>
-        <li>Cart</li>
+        <li>Checkout</li>
       </ul>
     </div>
 
-    <div class="container">
-      <div></div>
+    <!-- container -->
+    <div class="container DivForm">
+      <!-- div one start -->
+      <div class="BillingDIV">
+        <form action="" method="get">
+          <p class="BillingP">Billing Details</p>
+          <div class="inputName">
+            <div class="FirstName">
+            <label for="first">First Name <span class="required">*</span></label>
+            <input type="text" name="first" value="" required />
+        </div><div class="LastName">
+            <label for="last">Last Name <span class="required">*</span></label>
+            <input type="text" name="last" value="" required /></div>
+          </div>
+          <div class="CountryDIV">
+            <label for="">Country<span class="required">*</span></label>
+            <select name="Country" id="">
+              <option value="eg">Egypt</option>
+              <option value="us">unit stats</option>
+            </select>
+          </div>
+          <!-- CompanyNameDiv -->
+          <div class="CompanyNameDiv">
+            <label for="CompanyName">Company Name</label>
+            <input type="text" value="" name="CompanyName" />
+          </div>
+          <!--\\ CompanyNameDiv \\-->
+          <!-- Address -->
+          <div class="AddressDiv">
+            <label for="Address">Address <span class="required">*</span></label>
+            <input
+            type="text"
+            value=""
+            name="Address"
+            required
+            placeholder="Street address"
+            />
+          </div>
+          <!--\\ Address \\-->
+          <!-- Postcode -->
+          <div class="PostcodeDIV">
+            <label for="Postcode">Postcode / Zip</label>
+            <input type="text" value="" placeholder="Postcode / Zip" />
+          </div>
+          <!--\\ Postcode \\-->
+          <!-- City -->
+          <div class="CityDIV">
+            <label for="City">Town / City <span class="required">*</span></label>
+            <input type="text" name="City" id="" placeholder="Town / City" required />
+          </div>
+          <!--\\ City \\-->
+          <!-- Email-Phone -->
+          <div class="Email-Phone">
+            <!-- Email -->
+            <div class="Email">
+              <label for="Email">Email Address *</label>
+              <input type="email" name="Email" id="" value="" required />
+            </div>
+            <!--\\ Email \\-->
+            <!-- Phone -->
+            <div class="Phone">
+              <label for="Phone">Phone *</label>
+              <input type="tel" name="Phone" id="" value="" required />
+            </div>
+            <!--\\ Phone \\-->
+          </div>
+        </form>
+        <!-- Check -->
+        <div class="Check">
 
-      <div></div>
+          <input type="checkbox" name="Check" id="" value="Check">
+          <label for="Check"> Create an account?</label>
+        </div>
+        <!--\\ Check \\-->
+      </div>
+      <!--\\ Email-Phone \\-->
+      <!-- div one end -->
+
+
+
+      <!-- div TOW Start -->
+      <div class="order">
+        <div>
+          <p>Your order</p>
+
+          <div class="Content-Total">
+            <div><span>Product</span> <span>Total</span></div>
+            <div>
+              <span>Casual men wearing cool shoe x 1</span> <span>120$</span>
+            </div>
+            <div><span>Subtotal</span><span>400</span></div>
+            <div><span>Shipping</span><span>Free Shipping</span></div>
+            <div><span>Total</span><span>$ 400</span></div>
+          </div>
+        </div>
+
+        <div class="pay">
+          <div class="DirectBankDIV">
+            <input
+              type="checkbox"
+              name="DirectBankTransfer"
+              id=""
+              placeholder=""
+              value="Direct Bank Transfer"
+            />
+            <label for="DirectBankTransfer">Direct Bank Transfer</label>
+            <p>
+              Make your payment directly into our bank account. Please use your
+              Order ID as the payment reference. Your order won’t be shipped
+              until the funds have cleared in our account.
+            </p>
+          </div>
+        </div>
+
+        <div class="ChequeDIV">
+          <input
+            type="checkbox"
+            name="ChequePayment"
+            id=""
+            value="Cheque Payment"
+          />
+          <label for="ChequePayment">Cheque Payment</label>
+        </div>
+
+        <div class="PaypalDIV">
+          <input type="checkbox" name="Paypal" id="" value="Paypal" />
+          <label for="Paypal">Paypal</label>
+        </div>
+      </div>
     </div>
 
     <!-- footer -->
