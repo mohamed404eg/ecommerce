@@ -36,7 +36,16 @@ function LoopLocalStorage() {
     let td4 = document.createElement("td");
     let td5 = document.createElement("td");
 
-    td1.innerHTML = `<img class="imgProdect" src="${dataProdect.img}" alt=""> <p class="Prodecttitle"> ${dataProdect.title}</p>`;
+
+    // title cut 
+let TitleSubstring = `${dataProdect.title.substring(1,40)}....`
+
+    // check width if >= 500 veiw all title
+    if (window.screen.width >= 500) {
+       TitleSubstring = `${dataProdect.title}`
+    }
+
+    td1.innerHTML = `<img class="imgProdect" src="${dataProdect.img}" alt=""> <p class="Prodecttitle"> ${TitleSubstring}</p>`;
     td2.innerHTML = `<p   class="Color-Size">none</p>`;
     td3.innerHTML = `<span class="Quantity">Quantity</span><input class="inputOrders" onkeyup="UPdataQuantity(${dataProdect.id}, this)" type="number" value="${dataProdect.orders}"> `;
     td4.innerHTML = `$${dataProdect.price}`;

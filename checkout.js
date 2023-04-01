@@ -6,13 +6,28 @@ function orderLoop() {
   // getproducts to array
   let productsArray = JSON.parse(getproducts);
 
-    for (product of productsArray) {
+ 
+
+  for (product of productsArray) {
+      
+   // title cut 
+   let TitleSubstring = `${product.title.substring(1,30)}....`
+
+   // check width if >= 500 veiw all title
+   if (window.screen.width >= 800) {
+      TitleSubstring = `${product.title}`
+   }
+   if (window.screen.width <= 360) {
+    TitleSubstring = `${product.title.substring(1,20)}....`
+   }
+
+
 
         orderFORLOOP.innerHTML += `
 
         <!-- order Prodect Price -->
         <div class="order-Prodect-Price">
-          <span class="order_title">${product.title} x  <span class="orders">${product.orders}</span> </span> 
+          <span class="order_title">${TitleSubstring} x  <span class="orders">${product.orders}</span> </span> 
           
           <span class="order_Price">${product.price}$</span>
 
