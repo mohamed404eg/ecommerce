@@ -131,11 +131,13 @@ footer {
       justify-content: space-around;
       align-items: center;
       position: relative;
+      width: 97%;
     }
   
     /* footer */
     footer {
       height: auto;
+      width: 100%;
     }
     .mid-section {
       height: auto;
@@ -147,6 +149,8 @@ footer {
       width: 100%;
       align-items: center;
       text-align: center;
+      padding-left: 0;
+      padding-right: 0;
     }
     .mid-section ul {
       padding-left: 0;

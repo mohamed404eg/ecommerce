@@ -53,10 +53,9 @@ for (i = 0; i < prodactArray.length; i++) {
   BestSellesProdectImg[i].setAttribute("src", `${prodactArray[i].img}`);
   // Delete the number of extra characters
   let s = prodactArray[i].title;
- 
-  BestSellesProdectTitle[i].innerHTML = `${ s.substring(0, 50)}`
- 
-  
+
+  BestSellesProdectTitle[i].innerHTML = `${s.substring(0, 50)}`;
+
   BestSellesProdectPrice[i].innerHTML = prodactArray[i].price;
 }
 
@@ -111,46 +110,59 @@ for (let c = 0; c < 4; c++) {
   addToCart[c].setAttribute("onclick", `addPUSH(${prodactArray[c].id})`);
 }
 
-//  function onclick icon cart
+//*  function onclick icon cart
 function addPUSH(id) {
-  // Array cart Include PUSH to cartInclude
-  if (localStorage.getItem(prodactArray[id].id)) {
-    // get Retrieves localStorage
-    let Retrieves = localStorage.getItem(`${prodactArray[`${id}`].id}`);
-    // Retrieves to Object
-    let RetrievesObj = JSON.parse(Retrieves);
-    // cheak orders one or no
-    if (RetrievesObj.orders >= 1) {
-      // Object change orders to pluse one
-      RetrievesObj.orders += 1;
-      console.info("orders++");
+  // Add the element if it does not exist Array cartInclude
+  let newProduct = prodactArray[id];
 
-      let RetrievesStringify = JSON.stringify(RetrievesObj);
-      //    Item update in localStorage
-      localStorage.setItem(`${prodactArray[`${id}`].id}`, RetrievesStringify);
-    }
-
-    console.info("exis");
-  } else {
-    // Add the element if it does not exist Array cartInclude
-    let tostringifyS = JSON.stringify(prodactArray[id]);
-
-    localStorage.setItem(`${prodactArray[`${id}`].id}`, tostringifyS);
+  // get products localStorage
+  if (localStorage.getItem("products") === null) {
+    localStorage.setItem("products", "[]");
+    console.log("not exist");
   }
 
-  // call function cart Number Span UPdata
-  cartNumberSpanUPdata();
+  let getproducts = localStorage.getItem("products");
+  let getproductsTOARRAY = JSON.parse(getproducts);
+
+  // updata Products
+  let productExists = false;
+  for (let product of getproductsTOARRAY) {
+    if (product.id === newProduct.id) {
+      product.orders += 1;
+      productExists = true;
+      break;
+    }
+  }
+
+  if (!productExists) {
+    getproductsTOARRAY.push(newProduct);
+
+    // cart Number span updata
+    
+  }
+
+  let getproductsTOSTRAINFiy = JSON.stringify(getproductsTOARRAY);
+  localStorage.setItem("products", getproductsTOSTRAINFiy);
+  cartNumberSpanUPdata()
 }
 
 // cart Number span
-let cartNumberSpan = document.getElementsByClassName("cart-Number");
-let cartNumber = `${localStorage.length ?? "0"} `;
 function cartNumberSpanUPdata() {
-  cartNumberSpan[0].innerHTML = `${cartNumber}`;
-}
-window.addEventListener("DOMContentLoaded", cartNumberSpanUPdata());
-// add to localStorage
+  // get products
+  let getproducts = localStorage.getItem("products");
+  let getproductsTOARRAY = JSON.parse(getproducts);
 
+  let cartNumber = `${getproductsTOARRAY.length ?? "0"} `;
+
+  let cartNumberSpan = document.querySelector(".cart-Number");
+  cartNumberSpan.innerHTML = `${cartNumber}`;
+}
+
+window.addEventListener("DOMContentLoaded" , cartNumberSpanUPdata)
+
+
+
+// add to localStorage
 // Featured Products Array
 
 let FeaturedProducts = [
@@ -297,7 +309,9 @@ let FeaturedProductsPrice = document.querySelectorAll(".FeaturedProductsPrice");
 for (i = 0; i < 10; i++) {
   FeaturedProductsImg[i].setAttribute("src", `${FeaturedProducts[i].img}`);
   let FeaturedProductsTitleSubstring = FeaturedProducts[i].title;
-  FeaturedProductsTitle[i].innerHTML = `${FeaturedProductsTitleSubstring.substring(0,50)}`;
+  FeaturedProductsTitle[
+    i
+  ].innerHTML = `${FeaturedProductsTitleSubstring.substring(0, 50)}`;
   FeaturedProductsPrice[i].innerHTML = `${FeaturedProducts[i].price}`;
 }
 
@@ -332,39 +346,62 @@ for (let c = 0; c < 10; c++) {
   addToCart2[c].setAttribute("onclick", `addPUSH2(${FeaturedProducts[c].id})`);
 }
 
-//  function onclick icon cart
+//*  function onclick icon cart
 function addPUSH2(id) {
-  // Array cart Include PUSH to cartInclude
-  if (localStorage.getItem(FeaturedProducts[id].id)) {
-    // get Retrieves localStorage
-    let Retrieves = localStorage.getItem(`${FeaturedProducts[`${id}`].id}`);
-    // Retrieves to Object
-    let RetrievesObj = JSON.parse(Retrieves);
-    // cheak orders one or no
-    if (RetrievesObj.orders >= 1) {
-      // Object change orders to pluse one
-      RetrievesObj.orders += 1;
-      console.info("orders++");
+  // Add the element if it does not exist Array cartInclude
+  let newProduct = FeaturedProducts[id];
 
-      let RetrievesStringify = JSON.stringify(RetrievesObj);
-      //    Item update in localStorage
-      localStorage.setItem(
-        `${FeaturedProducts[`${id}`].id}`,
-        RetrievesStringify
-      );
-    }
-
-    console.info("exis");
-  } else {
-    // Add the element if it does not exist Array cartInclude
-    let tostringifyS = JSON.stringify(FeaturedProducts[id]);
-
-    localStorage.setItem(`${FeaturedProducts[`${id}`].id}`, tostringifyS);
+  // get products localStorage
+  if (localStorage.getItem("products") === null) {
+    localStorage.setItem("products", "[]");
+    console.log("not exist");
   }
 
-  // call function cart Number Span UPdata
-  cartNumberSpanUPdata();
+  let getproducts = localStorage.getItem("products");
+  let getproductsTOARRAY = JSON.parse(getproducts);
+
+  // updata Products
+  let productExists = false;
+  for (let product of getproductsTOARRAY) {
+    if (product.id === newProduct.id) {
+      product.orders += 1;
+      productExists = true;
+      break;
+    }
+  }
+
+  if (!productExists) {
+    getproductsTOARRAY.push(newProduct);
+
+    
+  }
+  
+  let getproductsTOSTRAINFiy = JSON.stringify(getproductsTOARRAY);
+  localStorage.setItem("products", getproductsTOSTRAINFiy);
+  // cart Number span updata
+  cartNumberSpanUPdata()
 }
+
+//*  function onclick icon cart \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // total stars
 const TotalStarsFeatured = 5;
@@ -385,8 +422,3 @@ function getRatingsFeatured() {
     stars_inner[rat].style.width = StarsPercentRound;
   }
 }
-
-
-
-
-

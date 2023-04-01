@@ -287,7 +287,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .container {
-    max-width: 540px;
+    max-width: 700px;
   }
 
   /* header */

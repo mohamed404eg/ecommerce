@@ -10,4 +10,3 @@ menuclose.addEventListener("click", () => {
     listMenu.classList.toggle("listMenuToggle")
 })
 
-console.log(menuclose)
