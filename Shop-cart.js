@@ -178,17 +178,18 @@ LoopLocalStorage()
 
 // \\ Delete \\
 
+
+
 // Subtotal
 function Subtotal() {
   let total = 0; // تعيين قيمة افتراضية للمتغير total
-
+  // import localStorage prodect
+  let getproducts = localStorage.getItem("products");
+  let getproductsTOARRAY = JSON.parse(getproducts);
   // Loop LocalStorage IN Prodect
-  for (let i = 0; i < localStorage.length; i++) {
-    // import localStorage prodect
-    let dataProdect = JSON.parse(localStorage.getItem(localStorage.key(i)));
-
+  for (let product of getproductsTOARRAY) {
     // حساب إجمالي المبلغ لكل منتج
-    total += dataProdect.price * dataProdect.orders;
+    total += product.price * product.orders;
   }
 
   let SubtotalNUM = document.querySelector(".SubtotalNUM");
@@ -199,7 +200,8 @@ function Subtotal() {
 
   let FREE100 = 100;
 
-  if ((couponValue.value === "FREE100") | (couponValue.value === "free100")) {
+  if ((couponValue.value === "FREE100") | (couponValue.value === "free100") | localStorage.getItem("discount") == "FREE100") {
+
     // updata value coupon span
     let CouponNUM = document.querySelector(".CouponNUM");
     CouponNUM.innerHTML = -FREE100;
@@ -208,8 +210,25 @@ function Subtotal() {
 
     // to active coupon to save localStorage
     let saveCoupon = localStorage.setItem("discount", "FREE100");
-    console.log(saveCoupon);
+
+    // check if in localStorage 
+    if (localStorage.getItem("discount") == "FREE100") {
+      couponValue.value = "FREE100";
+    }
+
+    couponValue.addEventListener("keyup", () => {
+      if (couponValue.value.toUpperCase() !== "FREE100") {
+        couponValue.value = "";
+        localStorage.removeItem("discount");
+      
+      }
+    // call function  updata SHOPPING CART CALCUATION
+      Subtotal()
+    });
+
+ 
   }
+
 
   // Shipping fee driver
   let Country = document.querySelector("#Country");
@@ -225,6 +244,25 @@ function Subtotal() {
   // set calcuation Total + Shipping fee driver + coupon discount
   let calcuationTotal = document.querySelector(".calcuationTotal");
   calcuationTotal.innerHTML = `$${total + feeShipping} `;
+
+  // set to localStorage
+  localStorage.setItem("feeShipping",feeShipping)
 }
 
 window.addEventListener("DOMContentLoaded", Subtotal);
+
+
+
+// cart Number span
+function cartNumberSpanUPdata() {
+  // get products
+  let getproducts = localStorage.getItem("products");
+  let getproductsTOARRAY = JSON.parse(getproducts);
+
+  let cartNumber = `${getproductsTOARRAY.length ?? "0"} `;
+
+  let cartNumberSpan = document.querySelector(".cart-Number");
+  cartNumberSpan.innerHTML = `${cartNumber}`;
+}
+
+window.addEventListener("DOMContentLoaded" , cartNumberSpanUPdata)
