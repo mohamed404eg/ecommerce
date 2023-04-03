@@ -566,6 +566,7 @@ a {
   background-image: url(./img/slide5.jpg);
   background-repeat: no-repeat;
   height: 300px;
+  width: 100%;
 }
 .Subscribe {
   padding-right: 0;
