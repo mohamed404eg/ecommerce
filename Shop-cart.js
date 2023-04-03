@@ -274,4 +274,7 @@ function cartNumberSpanUPdata() {
   cartNumberSpan.innerHTML = `${cartNumber}`;
 }
 
-window.addEventListener("DOMContentLoaded" , cartNumberSpanUPdata)
+window.addEventListener("DOMContentLoaded", cartNumberSpanUPdata)
+
+
+

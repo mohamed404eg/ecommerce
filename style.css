@@ -1146,6 +1146,11 @@ footer {
     padding-bottom: 14px;
   }
 
+
+  /* display options2+1 all product */
+  .options2 , .options  {
+    display: block;
+  }
   .BestSellesProdectImg {
     max-width: 300px;
     height: 80%;
