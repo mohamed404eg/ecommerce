@@ -529,6 +529,14 @@
   .ProceedToCheckout {
     width: 100%;
   }
+    /* width 100% table */
+    .table {
+      width: 100%;
+  
+    }
+    .TbodyPordect {
+      width: 80%;
+    }
 }
 
 @media screen and (max-width: 500px) {
