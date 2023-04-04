@@ -511,6 +511,18 @@
   .ContinueShopping {
     margin-left: 0;
   }
+
+  /* calcuation Total */
+  .calcuation-Totaldiv {
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px #a3a2a3;
+    padding: 11px;
+}
+.SubtotalNUM , .calcuationTotal {
+  padding-left: 3px;
+}
+
 }
 
 @media screen and (max-width: 768px) {
@@ -520,6 +532,16 @@
 }
 
 @media screen and (max-width: 500px) {
+
+
+  /* width 100% table */
+  .table {
+    width: 100%;
+
+  }
+  .TbodyPordect {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -589,4 +611,7 @@
     border-collapse: collapse;
     color: #000;
   }
+
+
+
 }

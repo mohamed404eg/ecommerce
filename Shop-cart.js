@@ -41,7 +41,7 @@ function LoopLocalStorage() {
 let TitleSubstring = `${dataProdect.title.substring(1,40)}....`
 
     // check width if >= 500 veiw all title
-    if (window.screen.width >= 500) {
+    if (window.screen.width >= 501) {
        TitleSubstring = `${dataProdect.title}`
     }
 
@@ -202,7 +202,7 @@ function Subtotal() {
   }
 
   let SubtotalNUM = document.querySelector(".SubtotalNUM");
-  SubtotalNUM.innerHTML = `$${total}`; // إخراج الإجمالي إلى  في المتصفح
+  SubtotalNUM.innerHTML = `$${total.toFixed(2)}`; // إخراج الإجمالي إلى  في المتصفح
 
   // coupon discount
   let couponValue = document.querySelector(".coupon-value");
@@ -252,7 +252,7 @@ function Subtotal() {
 
   // set calcuation Total + Shipping fee driver + coupon discount
   let calcuationTotal = document.querySelector(".calcuationTotal");
-  calcuationTotal.innerHTML = `$${total + feeShipping} `;
+  calcuationTotal.innerHTML = `$${(total + feeShipping).toFixed(2)} `;
 
   // set to localStorage
   localStorage.setItem("feeShipping",feeShipping)

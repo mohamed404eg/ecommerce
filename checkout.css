@@ -1,3 +1,8 @@
+
+/* Global */
+html {
+ scroll-behavior: smooth;
+}
 :root{
   --border: #a3a2a3;
   --border-order: #a3a2a3;
@@ -9,7 +14,9 @@
 .Breadcrumb {
   padding-top: 50px;
   padding-bottom: 39px;
+color: var(--green);
 }
+
 
 .Breadcrumb li {
   display: inline;

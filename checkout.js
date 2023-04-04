@@ -51,7 +51,7 @@ function Subtotal() {
   }
 
   let SubtotalNUM = document.querySelector(".SubtotalNUM");
-  SubtotalNUM.innerHTML = `$${total}`; // إخراج الإجمالي إلى  في المتصفح
+  SubtotalNUM.innerHTML = `$${total.toFixed(2)}`; // إخراج الإجمالي إلى  في المتصفح
 
   console.log(total);
 
@@ -81,7 +81,7 @@ function Subtotal() {
 
   // set calcuation Total + Shipping fee driver + coupon discount
   let calcuationTotal = document.querySelector(".calcuationTotal");
-  calcuationTotal.innerHTML = `$${total + +FeeShippingNUM} `;
+  calcuationTotal.innerHTML = `$${(total + +FeeShippingNUM).toFixed(2)} `;
 }
 
 window.addEventListener("DOMContentLoaded", Subtotal);
@@ -97,5 +97,7 @@ finale.addEventListener("click", () => {
 
     // flex-direction column
   DivForm.style.flexDirection = "column";
+
+  window.scrollTo(0,0);
 });
 // finale\\
