@@ -366,7 +366,7 @@ label {
   width: 135px;
   height: 36px;
   border: none;
-  background-color: var(---green);
+  background-color: var(--green);
   font-family: var(--Poppins);
   font-size: 14px;
   color: #fff;
